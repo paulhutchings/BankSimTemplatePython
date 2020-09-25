@@ -5,6 +5,12 @@
 tomcat
 
 #
+# Python cache
+#
+
+*.pyc
+
+#
 # Default excludes
 #
 

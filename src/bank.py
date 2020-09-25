@@ -17,7 +17,7 @@ class Bank:
         self._num_transactions = 0
         self._initial_balance = initial_balance
         self._num_accounts = num_accounts
-        self._accounts = [Account(i, initial_balance) for i in range(num_accounts)]
+        self._accounts = [Account(id=i, initial_balance=initial_balance) for i in range(num_accounts)]
 
     def get_num_accounts(self):
         """
@@ -41,7 +41,7 @@ class Bank:
         Returns True if the bank needs to be tested, otherwise False
         """
         self._num_transactions += 1
-        return self._num_transactions % N_TEST == 0
+        return self._num_transactions % Bank.N_TEST == 0
     
     def test(self):
         """
