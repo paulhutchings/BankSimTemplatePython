@@ -8,7 +8,7 @@
  @author Modified by Paul Hutchings
 """
 class Account:
-    def __init__(self, id, initial_balance):
+    def __init__(self, id: int, initial_balance: int):
         """
         Creates and returns a new Account object
         """
@@ -21,7 +21,7 @@ class Account:
         """
         return self._balance
 
-    def withdrawal(self, amount):
+    def withdrawal(self, amount: int):
         """
         Withdrawals money from the account
         """
@@ -31,7 +31,7 @@ class Account:
         else:
             return False
 
-    def deposit(self, amount):
+    def deposit(self, amount: int):
         """
         Deposits money into the account
         """

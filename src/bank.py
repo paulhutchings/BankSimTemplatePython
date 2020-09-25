@@ -10,7 +10,7 @@ from account import Account
 
 class Bank:
     N_TEST = 10
-    def __init__(self, num_accounts, initial_balance):
+    def __init__(self, num_accounts: int, initial_balance: int):
         """
         Creates and returns a new Bank object
         """
@@ -25,12 +25,12 @@ class Bank:
         """
         return len(self._accounts)
 
-    def transfer(self, from_acc, to_acc, amount):
+    def transfer(self, from_account: int, to_account: int, amount: int):
         """
         Transfers money from one account to another
         """
-        if self._accounts[from_acc].withdrawal(amount):
-            self._accounts[to_acc].deposit(amount)
+        if self._accounts[from_account].withdrawal(amount):
+            self._accounts[to_account].deposit(amount)
 
         # Uncomment below when ready to start Task 3
         # if self.should_test():
@@ -49,8 +49,7 @@ class Bank:
         or not the total amount has changed.
         """
         [print(account.to_string()) for account in self._accounts]
-        balances = [account.get_balance() for account in self._accounts]
-        total_balance = sum(balances)
+        total_balance = sum([account.get_balance() for account in self._accounts])
         print(f'Total balance: {total_balance}')
         if total_balance == self._num_accounts * self._initial_balance:
             print('Total balance unchanged')
