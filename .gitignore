@@ -11,6 +11,11 @@ tomcat
 *.pyc
 
 #
+# VS Code configuration files
+#
+.vscode/
+
+#
 # Default excludes
 #
 
